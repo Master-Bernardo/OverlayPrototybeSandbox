@@ -1,0 +1,2 @@
+I:\UnityProjects\OverlayPrototypLaserSandbox\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+I:\UnityProjects\OverlayPrototypLaserSandbox\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
