@@ -16,7 +16,7 @@ public class Laser : MonoBehaviour {
 
     //for display
     public Transform startPoint;
-    private Transform endPoint;
+    private Vector3 endPoint;
     public LineRenderer lineRenderer;
     public bool active = true; //do we see the laser?
 
@@ -45,7 +45,7 @@ public class Laser : MonoBehaviour {
             if (Physics.Raycast(startPoint.position, startPoint.forward, out hit, 100, layerMask))
             {
                 GameObject hittedObject = hit.collider.gameObject;
-                endPoint = hittedObject.transform;
+                endPoint = hittedObject.transform.position;
 
             
                 if (hittedObject.GetComponent<BlockObject>() != null)
@@ -62,10 +62,11 @@ public class Laser : MonoBehaviour {
                 {
                     //if (destinationBlock != null) destinationBlock.RemoveInputLaser(this);
                     destinationBlock = null;
+                    endPoint = hit.point;
                 }
 
                 lineRenderer.SetPosition(0, startPoint.position);
-                lineRenderer.SetPosition(1, endPoint.position);
+                lineRenderer.SetPosition(1, endPoint);
             }
             else
             {

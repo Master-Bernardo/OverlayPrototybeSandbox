@@ -7,8 +7,13 @@ public class RConverter : BlockObject
     public Texture2D inputImage;
     public LaserOutput laserOutput;
 
-    // Update is called once per frame
+    //the texture this block outputs
+    Texture2D outputImage;
 
+    protected override void Start()
+    {
+        base.Start();
+    }
 
     override protected void Update()
     {
@@ -16,27 +21,24 @@ public class RConverter : BlockObject
 
         if (inputLasers.Count == 1)
         {
+            //we can anly accept one laser for this block, so we check if its the same laser as last time
             foreach (Laser laser in inputLasers)
             {
-                inputImage = laser.image;
-            }
-
-            Texture2D newTex = Instantiate(inputImage);
-
-            for (int y = 0; y < newTex.height; y++)
-            {
-                for (int x = 0; x < newTex.width; x++)
+                if(inputImage == laser.image) //if we already have this image
                 {
-                    //if (x < 20 || x > 150)
-                    //{
-                        newTex.SetPixel(x, y, new Color(inputImage.GetPixel(x, y).r, 0f,0f));
-
-                    //}
+                    //do nothing
                 }
+                else //if we have a new inputImage or we had null before
+                {
+                    inputImage = laser.image;
+                    ComputeOutputImage(inputImage);
+                }
+                
             }
-            newTex.Apply();
 
-            laserOutput.laser.image = newTex;
+           
+
+            laserOutput.laser.image = outputImage;
             laserOutput.active = true;
 
         }
@@ -45,6 +47,25 @@ public class RConverter : BlockObject
             laserOutput.active = false;
         }
 
+    }
+
+    void ComputeOutputImage(Texture2D _inputImage)
+    {
+        //Debug.Log(_inputImage.format);
+       /* outputImage = Instantiate(_inputImage);
+
+        for (int y = 0; y < outputImage.height; y++)
+        {
+            for (int x = 0; x < outputImage.width; x++)
+            {
+                //if (x < 20 || x > 150)
+                //{
+                outputImage.SetPixel(x, y, new Color(_inputImage.GetPixel(x, y).r, 0f, 0f), );
+
+                //}
+            }
+        }
+        outputImage.Apply();*/
     }
 
 }

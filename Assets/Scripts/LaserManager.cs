@@ -38,9 +38,9 @@ public class LaserManager : MonoBehaviour {
     }
 
     //this gets called by a block object which wants to know which lasers are hitting it
-    public HashSet<Laser> GetInputLasers(BlockObject blockObject)
+    public List<Laser> GetInputLasers(BlockObject blockObject)
     {
-        HashSet<Laser> lasersToReturn = new HashSet<Laser>();
+        List<Laser> lasersToReturn = new List<Laser>();
 
         foreach (Laser laser in lasers)
         {

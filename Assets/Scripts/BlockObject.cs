@@ -11,22 +11,13 @@ public class BlockObject : MonoBehaviour {
     public GameObject selectionMarker;
 
     //For Lasers
-    protected HashSet<Laser> inputLasers;
-    //protected List<Laser> outputLasers;
-
-
-    //for laser
-    //public GameObject laserPrefab;
-    //public Transform laserOutputPoint;
+    protected List<Laser> inputLasers;
 
     // Use this for initialization
     virtual protected void Start ()
     {
         transform.position = assignedGridPoint.transform.position + new Vector3(0f,0.5f,0f);
         selectionMarker.SetActive(false);
-
-        //inputLasers = new List<Laser>();
-        //outputLasers = new List<Laser>();
     }
 
     virtual protected void Update()
@@ -55,21 +46,4 @@ public class BlockObject : MonoBehaviour {
     {
         selectionMarker.SetActive(false);
     }
-
-
-    /*
-    //gets called when a laser hits this
-    virtual public void AddInputLaser(Laser laser)
-    {
-        inputLasers.Add(laser);
-        Debug.Log("added");
-    }
-
-    virtual public void RemoveInputLaser(Laser laser)
-    {
-        inputLasers.Remove(laser);
-        Debug.Log("removed");
-    }
-    */
-
 }

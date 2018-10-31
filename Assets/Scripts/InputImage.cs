@@ -16,23 +16,18 @@ public class InputImage : BlockObject {
         base.Start();
         laserOutput.active = true;
 
-        Texture2D newTex = Instantiate(inputImage);
-
-        /*for (int y = 0; y < newTex.height; y++)
+        Texture2D outputImage = new Texture2D(inputImage.width, inputImage.height, TextureFormat.RGBA32,false);
+        for (int y = 0; y < outputImage.height; y++)
         {
-            for (int x = 0; x < newTex.width; x++)
+            for (int x = 0; x < outputImage.width; x++)
             {
-                if (x<20||x>150)
-                {
-                    newTex.SetPixel(x, y, Color.red);
-                    
-                }
+                outputImage.SetPixel(x, y, inputImage.GetPixel(x, y));
             }
+            outputImage.Apply();
         }
-        newTex.Apply();
-        */
-        laserOutput.laser.image = newTex;
-        debugImage.sprite = Sprite.Create(newTex, new Rect(0, 0, newTex.width, newTex.height), new Vector2(0.5f, 0.5f));
+
+        laserOutput.laser.image = outputImage;
+        debugImage.sprite = Sprite.Create(outputImage, new Rect(0, 0, outputImage.width, outputImage.height), new Vector2(0.5f, 0.5f));
     }
 
     protected override void Update()
