@@ -271,6 +271,8 @@ MonoBehaviour:
   actionBlocked: 0
   selectionMarker: {fileID: 1575605716032208}
   laserOutput: {fileID: 114400296298133164}
+  inputImage: {fileID: 0}
+  debugImage: {fileID: 0}
 --- !u!114 &114400296298133164
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -284,4 +286,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laserPrefab: {fileID: 1558419561597978, guid: eed247e19ea99d144a37fbf04ae54df6,
     type: 2}
+  laser: {fileID: 0}
   active: 0

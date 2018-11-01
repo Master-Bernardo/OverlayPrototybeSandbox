@@ -401,8 +401,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7bdc7b6e2cd76749afc7f58295bbf88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasInput: 0
-  inputLaser: {fileID: 0}
 --- !u!114 &114112608839995108
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -414,8 +412,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7bdc7b6e2cd76749afc7f58295bbf88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasInput: 0
-  inputLaser: {fileID: 0}
 --- !u!114 &114641692090650870
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -429,6 +425,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laserPrefab: {fileID: 1558419561597978, guid: eed247e19ea99d144a37fbf04ae54df6,
     type: 2}
+  laser: {fileID: 0}
   active: 0
 --- !u!114 &114734139301183702
 MonoBehaviour:
@@ -443,6 +440,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laserPrefab: {fileID: 1558419561597978, guid: eed247e19ea99d144a37fbf04ae54df6,
     type: 2}
+  laser: {fileID: 0}
   active: 0
 --- !u!114 &114804320344828334
 MonoBehaviour:
@@ -459,7 +457,5 @@ MonoBehaviour:
   stationary: 0
   actionBlocked: 0
   selectionMarker: {fileID: 1597286183737014}
-  laserInputFront: {fileID: 114112608839995108}
-  laserInputBack: {fileID: 114112048186152546}
   outputLaserFront: {fileID: 114641692090650870}
   outputLaserBack: {fileID: 114734139301183702}

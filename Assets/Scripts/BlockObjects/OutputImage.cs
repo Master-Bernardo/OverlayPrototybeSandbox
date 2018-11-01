@@ -18,6 +18,7 @@ public class OutputImage : BlockObject {
         base.Start();
         goalImageUI.sprite = Sprite.Create(goalImage, new Rect(0, 0, goalImage.width, goalImage.height), new Vector2(0.5f, 0.5f));
         debugImage.sprite = Sprite.Create(noImage, new Rect(0, 0, noImage.width, noImage.height), new Vector2(0.5f, 0.5f));
+
     }
 
     // Update is called once per frame

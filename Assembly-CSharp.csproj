@@ -61,20 +61,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\AdditivBox.cs" />
-    <Compile Include="Assets\Scripts\BlockObject.cs" />
+    <Compile Include="Assets\Scripts\BlockObjects\AdditivBox.cs" />
+    <Compile Include="Assets\Scripts\BlockObjects\BlockObject.cs" />
+    <Compile Include="Assets\Scripts\BlockObjects\InputImage.cs" />
+    <Compile Include="Assets\Scripts\BlockObjects\Mirror.cs" />
+    <Compile Include="Assets\Scripts\BlockObjects\OutputImage.cs" />
+    <Compile Include="Assets\Scripts\BlockObjects\RConverter.cs" />
+    <Compile Include="Assets\Scripts\BlockObjects\RGBPrisma.cs" />
+    <Compile Include="Assets\Scripts\BlockObjects\SubtractiveBox.cs" />
     <Compile Include="Assets\Scripts\GridBlock.cs" />
-    <Compile Include="Assets\Scripts\InputImage.cs" />
-    <Compile Include="Assets\Scripts\Laser.cs" />
-    <Compile Include="Assets\Scripts\LaserInput.cs" />
-    <Compile Include="Assets\Scripts\LaserManager.cs" />
-    <Compile Include="Assets\Scripts\LaserOutput.cs" />
-    <Compile Include="Assets\Scripts\Mirror.cs" />
-    <Compile Include="Assets\Scripts\OutputImage.cs" />
+    <Compile Include="Assets\Scripts\Laser things\Laser.cs" />
+    <Compile Include="Assets\Scripts\Laser things\LaserInput.cs" />
+    <Compile Include="Assets\Scripts\Laser things\LaserManager.cs" />
+    <Compile Include="Assets\Scripts\Laser things\LaserOutput.cs" />
     <Compile Include="Assets\Scripts\PlayerManager.cs" />
-    <Compile Include="Assets\Scripts\RConverter.cs" />
-    <Compile Include="Assets\Scripts\RGBPrisma.cs" />
-    <Compile Include="Assets\Scripts\SubtractiveBox.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>I:/UnityProjects/OverlayPrototybeSandbox/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

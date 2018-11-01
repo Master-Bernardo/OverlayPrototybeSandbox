@@ -71,6 +71,11 @@ public class AdditivBox : BlockObject
         }
         outputImage.Apply();
         laserOutput.laser.image = outputImage;
-}
+     }
+
+    override public void ActionOnMouseClick()
+    {
+        transform.Rotate(Vector3.up, 45);
+    }
 
 }

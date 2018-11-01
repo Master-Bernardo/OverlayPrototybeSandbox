@@ -70,4 +70,10 @@ public class RGBPrisma : BlockObject
 
         }
     }
+
+    override public void ActionOnMouseClick()
+    {
+        transform.Rotate(Vector3.up, 45);
+    }
+
 }
