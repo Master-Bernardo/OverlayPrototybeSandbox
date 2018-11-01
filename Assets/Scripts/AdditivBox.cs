@@ -53,16 +53,20 @@ public class AdditivBox : BlockObject
         {
             for (int x = 0; x < outputImage.width; x++)
             {
-                //if (x < 20 || x > 150)
-                //{
+                /*
                 outputImage.SetPixel(x, y,
                     new Color(
                     255-(255- _inputImages[0].GetPixel(x,y).r) *(255- _inputImages[1].GetPixel(x, y).r) /255,
                     255 - (255 - _inputImages[0].GetPixel(x, y).g) * (255 - _inputImages[1].GetPixel(x, y).g) / 255,
                     255 - (255 - _inputImages[0].GetPixel(x, y).b) * (255 - _inputImages[1].GetPixel(x, y).b) / 255
                     ));
-
-                //}
+*/
+                outputImage.SetPixel(x, y,
+                   new Color(
+                       1 - (1 - _inputImages[0].GetPixel(x, y).r) * (1 - _inputImages[1].GetPixel(x, y).r) / 1,
+                       1 - (1 - _inputImages[0].GetPixel(x, y).g) * (1 - _inputImages[1].GetPixel(x, y).g) / 1,
+                       1 - (1 - _inputImages[0].GetPixel(x, y).b) * (1 - _inputImages[1].GetPixel(x, y).b) / 1
+                   ));
             }
         }
         outputImage.Apply();

@@ -73,6 +73,8 @@
     <Compile Include="Assets\Scripts\OutputImage.cs" />
     <Compile Include="Assets\Scripts\PlayerManager.cs" />
     <Compile Include="Assets\Scripts\RConverter.cs" />
+    <Compile Include="Assets\Scripts\RGBPrisma.cs" />
+    <Compile Include="Assets\Scripts\SubtractiveBox.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>I:/UnityProjects/OverlayPrototybeSandbox/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
