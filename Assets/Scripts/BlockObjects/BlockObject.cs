@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class BlockObject : MonoBehaviour {
 
+    /*
+     * Der Grundbaustein, alle anderen Blocks erben von diesem
+     * Er hat eine Collection von Lasern, welche ihn hitten, 
+     * die Kinder entscheiden dann was sie mit diesen Lasern tun und 
+     * wieviele sie überhaupt wahrnehmen
+     */
+
     public Transform assignedGridPoint; //this is the current position of this block
     public bool stationary = false; //if this is true - then we cant move the object from its position - good for some puzzle objects like walls etc
     public bool actionBlocked = false; // if this is true we cant perform the onClickAction;

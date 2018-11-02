@@ -4,6 +4,7 @@ using UnityEngine;
 
 public enum LaserType
 {
+    //for now unused
     RGB,
     R,
     G,
@@ -32,6 +33,7 @@ public class Laser : MonoBehaviour {
         LaserManager.Instance.AddLaser(this);
     }
 
+    //this function shoots a raycast to see which block we hit and draws the laser accordingly
     public void UpdateLaser()//, BlockObject startingBlock)
     {
         if (active)
@@ -50,17 +52,13 @@ public class Laser : MonoBehaviour {
             
                 if (hittedObject.GetComponent<BlockObject>() != null)
                 {
-                    // hittedObject.GetComponent<Block>().LaserHit(this);
                     if (destinationBlock != hittedObject.GetComponent<BlockObject>())
                     {
-                        //if (destinationBlock != null) destinationBlock.RemoveInputLaser(this);
                         destinationBlock = hittedObject.GetComponent<BlockObject>();
-                        //destinationBlock.AddInputLaser(this);
                     }
                 }
                 else
                 {
-                    //if (destinationBlock != null) destinationBlock.RemoveInputLaser(this);
                     destinationBlock = null;
                     endPoint = hit.point;
                 }
@@ -70,7 +68,6 @@ public class Laser : MonoBehaviour {
             }
             else
             {
-                //if(destinationBlock!=null) destinationBlock.RemoveInputLaser(this);
                 destinationBlock = null;
                 lineRenderer.SetPosition(0, startPoint.position);
                 lineRenderer.SetPosition(1, startPoint.position + startPoint.forward*100);

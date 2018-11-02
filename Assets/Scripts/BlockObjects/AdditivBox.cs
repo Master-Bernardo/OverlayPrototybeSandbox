@@ -60,7 +60,7 @@ public class AdditivBox : BlockObject
                     255 - (255 - _inputImages[0].GetPixel(x, y).g) * (255 - _inputImages[1].GetPixel(x, y).g) / 255,
                     255 - (255 - _inputImages[0].GetPixel(x, y).b) * (255 - _inputImages[1].GetPixel(x, y).b) / 255
                     ));
-*/
+                //this is wrong because unity saves rgb data in 0-1 instead of 0-255*/          
                 outputImage.SetPixel(x, y,
                    new Color(
                        1 - (1 - _inputImages[0].GetPixel(x, y).r) * (1 - _inputImages[1].GetPixel(x, y).r) / 1,

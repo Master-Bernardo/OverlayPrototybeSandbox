@@ -2,7 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerManager : MonoBehaviour {
+public class PlayerManager : MonoBehaviour
+{
+    /*
+     * this class just checks which block we click with the mouse, this is done with a raycast.
+     * If we hit a block the mouseOnClickFunction of the blockObject class is called, or the doubleClick function
+     */
 
     public BlockObject selectedObject;
 

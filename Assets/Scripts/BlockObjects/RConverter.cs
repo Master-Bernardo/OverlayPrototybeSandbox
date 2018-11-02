@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class RConverter : BlockObject
 {
+    //this block outputs only the rbg channel - its a red Filter
+
     public Texture2D inputImage;
     public LaserOutput laserOutput;
 

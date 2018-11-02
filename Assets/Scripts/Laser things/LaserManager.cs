@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class LaserManager : MonoBehaviour {
 
+    /* 
+     * Diese Klasse hat alle Laser als eine Collection gespeichert und updatet sie - jetzt jeden frame - 
+     * kann aber auch nur einige male pro Sekunde passieren um die performance zu verbessern
+     */
     HashSet<Laser> lasers;
 
     public static LaserManager Instance;
